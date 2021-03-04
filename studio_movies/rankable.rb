@@ -1,0 +1,31 @@
+module Rankable
+  def thumbs_up
+    self.rank += 1
+  end
+
+  def thumbs_down
+    self.rank -= 1
+  end
+
+  def hit?
+    self.rank >= 10
+  end
+
+  def status
+    hit? ? 'Hit' : 'Flop'
+    # if hit?
+    #   "Hit"
+    # else
+    #   "Flop"
+    # end
+  end
+
+  def  normalized_rank
+    self.rank / 10
+  end
+
+  def <=>(other)
+    other.rank <=> self.rank
+  end
+
+end
