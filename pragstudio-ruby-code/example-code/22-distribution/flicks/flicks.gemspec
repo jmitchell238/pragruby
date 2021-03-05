@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
   s.executables   = [ 'flicks' ]
   
   s.required_ruby_version = '>=1.9'
-  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'spec'
 end
