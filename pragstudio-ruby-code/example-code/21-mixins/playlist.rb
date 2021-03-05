@@ -70,7 +70,7 @@ class Playlist
   
   def save(to_file="movie_rankings.csv")
     File.open(to_file, "w") do |file|
-      file.puts @movies.sort.map { |movie| movie.to_csv }
+      file.puts @movies.sort.map{ |movie| movie.to_csv }
     end
   end
   

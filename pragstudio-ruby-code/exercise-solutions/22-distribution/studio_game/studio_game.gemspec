@@ -13,5 +13,5 @@ Gem::Specification.new do |s|
   s.executables   = [ 'studio_game' ]
   
   s.required_ruby_version = '>=2.3'
-  s.add_development_dependency 'rspec', '~> 2.8', '>= 2.8.0'
+  s.add_development_dependency 'spec', '~> 2.8', '>= 2.8.0'
 end
