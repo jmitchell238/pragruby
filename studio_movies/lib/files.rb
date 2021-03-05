@@ -1,4 +1,4 @@
-require_relative 'movie'
+require_relative 'lib/movie'
 
 # file = File.open("movies.csv")
 # # read file
@@ -17,13 +17,14 @@ require_relative 'movie'
 #   puts movie
 # end
 
-movie1 = Movie.new("goonies", 10)
-movie2 = Movie.new("ghostbusters", 9)
-movie3 = Movie.new("goldfinger")
+movie1 = Flicks::Movie.new("goonies", 10)
+movie2 = Flicks::Movie.new("ghostbusters", 9)
+movie3 = Flicks::Movie.new("goldfinger")
 
 movies = [movie1, movie2, movie3]
+default_movie_file = File.join(File.dirname(__FILE__), 'movie_rankings.csv')
 
-File.open("movie_rankings.csv", "w") do |file|
+File.open(default_movie_file, "w") do |file|
   movies.sort.each do |movie|
     file.puts "#{movie.title},#{movie.rank}"
   end
